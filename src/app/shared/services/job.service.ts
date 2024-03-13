@@ -28,6 +28,7 @@ export class JobService {
       }),
       catchError((error) => {
         alert(`An error occured when retrieving the job list : ${error}`);
+        console.log(error);
         return EMPTY;
       })
     );
@@ -50,6 +51,7 @@ export class JobService {
     .pipe(
     catchError((error) => {
       alert(`An error occured when retrieving the job list : ${error}`);
+      console.log(error);
       return EMPTY;
     }));
   }
