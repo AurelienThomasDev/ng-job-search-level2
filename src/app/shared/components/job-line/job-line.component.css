@@ -1,0 +1,10 @@
+:host{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    max-width: 75px;
+    max-height: 75px;
+    margin: 10px;
+}

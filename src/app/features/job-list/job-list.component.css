@@ -1,0 +1,13 @@
+.job-line{
+    display: flex;
+    align-items: center;
+}
+
+.feather-star{
+    position: absolute;
+    right: 10px
+}
+
+.active{
+    fill: yellow;
+}

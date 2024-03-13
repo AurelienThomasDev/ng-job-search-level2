@@ -1,0 +1,34 @@
+<app-job-navigation/>
+<button (click)="goBack()">
+    <span class="icon-home"></span>
+    Back
+</button>
+<br>
+
+@if(job$ | async; as job) {
+    <img class="logo" src="{{job?.companyLogo}}" alt="{{job?.companyName}}">
+    
+    <h1> {{job.companyName}} - {{job.title}} </h1>
+
+    <br>
+    @for(type of job.types; track $index){
+        <mark class="tag" [innerHTML]="type"></mark>
+    }@for(industry of job.industries; track $index){
+        <mark class="tag" [innerHTML]="industry"></mark>
+    }
+
+    <br>
+    Publish Date: {{job.publishDate | date:'shortDate' }}
+
+    <br>
+    Location: {{job.location}}
+
+    <br>
+    Reference: {{job.reference}}
+
+
+    <br>
+    Description:  
+    <div [innerHTML]="job.description"></div>
+}
+

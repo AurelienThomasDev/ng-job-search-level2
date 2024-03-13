@@ -1,0 +1,12 @@
+<app-job-navigation/>
+
+@if (jobFavoritesList$ | async; as jobList){
+    @if(jobList.length > 0) {
+        @for(job of jobList; track $index){
+            <app-job-line [job]="job"/>
+        }
+    }
+    @else {
+        <h2> You currently have no favorite job </h2>
+    }
+}

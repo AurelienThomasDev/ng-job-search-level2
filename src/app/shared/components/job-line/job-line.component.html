@@ -1,0 +1,7 @@
+<img class="logo" [src]="job?.companyLogo" [alt]="job?.companyName">
+<div>
+    <h3>
+        <a [routerLink]="['/jobs',job?.id]"> {{job?.title}} </a>
+    </h3>
+    Company : {{ job?.companyName }} Reference : {{ job?.reference }}
+</div>
